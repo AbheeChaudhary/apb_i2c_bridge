@@ -77,8 +77,10 @@ module tb_apb_i2c;
         // Phase 3: WAIT-STATE INSERTION
         // The bridge will immediately pull 'pready' to 0 here.
         // We use a Verilog wait() statement to pause our simulated 
-        // processor until the bridge finishes the I2C transaction.
-        wait(pready == 1'b1);
+        // WE wait until pready is 0 since we encountered a bug where for the shifting phase it was going from 1->0 but it didn;t wait as it was waiting for it to get back high again which it was already
+        wait(pready == 1'b0);
+	// wait for the bridge to finish the slow I2C transaction and pull pready high
+	wait(pready == 1'b1);
 
         // Phase 4: TRANSACTION COMPLETE
         @(posedge pclk);

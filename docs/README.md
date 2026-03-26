@@ -15,3 +15,7 @@ The core control logic of the APB-to-I2C bridge is driven by a 5-state Finite St
 ### Design Considerations for Silicon
 * **Wait-State Insertion:** The `pready` signal is dynamically controlled by the FSM. It is immediately de-asserted upon leaving `IDLE` to prevent the RISC-V core from overwriting the APB data registers while the slow I2C transmission is in progress.
 * **Glitch-Free Outputs:** State transitions are strictly synchronized to the system `pclk`, but I2C wire toggling is guarded by a clock-divider enable tick to ensure setup/hold times for the I2C specification are met.
+
+### Simulation Results
+![GTKWave Simulation showing APB wait-states and I2C serialization](apb-i2c-waveform-A5-input.png)
+*Waveform demonstrating successful wait-state insertion (`pready` logic) during the parallel-to-serial protocol translation of payload 0xA5.*
