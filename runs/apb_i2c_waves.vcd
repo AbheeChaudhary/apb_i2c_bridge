@@ -1,0 +1,142 @@
+$date
+	Thu Mar 26 23:46:58 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_apb_i2c $end
+$var wire 1 ! sda_out $end
+$var wire 1 " sda_oe $end
+$var wire 1 # scl $end
+$var wire 1 $ pready $end
+$var wire 8 % prdata [7:0] $end
+$var reg 8 & paddr [7:0] $end
+$var reg 1 ' pclk $end
+$var reg 1 ( penable $end
+$var reg 1 ) presetn $end
+$var reg 1 * psel $end
+$var reg 8 + pwdata [7:0] $end
+$var reg 1 , pwrite $end
+$var reg 1 - sda_in $end
+$scope module uut $end
+$var wire 8 . paddr [7:0] $end
+$var wire 1 ' pclk $end
+$var wire 1 ( penable $end
+$var wire 1 ) presetn $end
+$var wire 1 * psel $end
+$var wire 8 / pwdata [7:0] $end
+$var wire 1 , pwrite $end
+$var wire 1 - sda_in $end
+$var parameter 3 0 ACK_PHASE $end
+$var parameter 3 1 DATA_SHIFT $end
+$var parameter 3 2 IDLE $end
+$var parameter 3 3 START $end
+$var parameter 3 4 STOP $end
+$var reg 3 5 bit_cnt [2:0] $end
+$var reg 8 6 prdata [7:0] $end
+$var reg 1 $ pready $end
+$var reg 1 # scl $end
+$var reg 1 " sda_oe $end
+$var reg 1 ! sda_out $end
+$var reg 8 7 shift_reg [7:0] $end
+$var reg 3 8 state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 4
+b1 3
+b0 2
+b10 1
+b11 0
+$end
+#0
+$dumpvars
+b0 8
+bx 7
+b0 6
+b111 5
+b0 /
+b0 .
+1-
+0,
+b0 +
+0*
+0)
+0(
+0'
+b0 &
+b0 %
+1$
+1#
+1"
+1!
+$end
+#10000
+1'
+#20000
+0'
+#25000
+1)
+#30000
+1'
+#40000
+0'
+#50000
+b10100101 +
+b10100101 /
+b10000 &
+b10000 .
+1,
+1*
+1'
+#60000
+0'
+#70000
+b1 8
+b10100101 7
+0$
+1(
+1'
+#80000
+0'
+#90000
+b10 8
+0!
+0,
+0(
+0*
+1'
+#100000
+0'
+#110000
+b110 5
+0#
+1'
+#120000
+0'
+#130000
+1#
+1'
+#140000
+0'
+#150000
+b101 5
+0#
+1'
+#160000
+0'
+#170000
+1!
+1#
+1'
+#180000
+0'
+#190000
+b100 5
+0#
+1'

@@ -7,6 +7,7 @@ module apb_i2c_bridge (
     input  wire        psel,      // Peripheral select
     input  wire        penable,   // Enable signal (Access phase)
     input  wire        pwrite,    // Direction (1=Write, 0=Read)
+    input  wire [7:0]  paddr,     // Register Address
     input  wire [7:0]  pwdata,    // Write data
     output reg  [7:0]  prdata,    // Read data
     output reg         pready,    // Ready signal (stall the bus if busy)
